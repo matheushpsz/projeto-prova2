@@ -19,6 +19,7 @@ Route::controller(UsuarioController::class)->group(function () {
     Route::post('/usuarios', 'store');        // Criar
     Route::put('/usuarios/{id}', 'update');   // Atualizar
     Route::delete('/usuarios/{id}', 'delete'); // Deletar
+    Route::get('/usuarios/{id}/reviews', 'reviews'); // Listar reviews de um usuário
 });
 
 // Rotas agrupadas para Autor

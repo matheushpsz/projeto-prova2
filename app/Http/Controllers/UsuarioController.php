@@ -51,4 +51,13 @@ class UsuarioController extends Controller
         }
         return response()->json(['message' => 'Usuário deletado com sucesso']);
     }
+
+    public function reviews($id)
+    {
+        $usuario = $this->usuarioService->getById($id);
+        if (!$usuario) {
+            return response()->json(['message' => 'Usuário não encontrado'], 404);
+        }
+        return response()->json($usuario->reviews);
+    }
 }
