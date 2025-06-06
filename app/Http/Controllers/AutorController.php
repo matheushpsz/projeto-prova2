@@ -51,4 +51,13 @@ class AutorController extends Controller
         }
         return response()->json(['message' => 'Autor deletado com sucesso']);
     }
+
+    public function livros($id)
+    {
+        $autor = $this->autorService->getById($id);
+        if (!$autor) {
+            return response()->json(['message' => 'Autor não encontrado'], 404);
+        }
+        return response()->json($autor->livros);
+    }
 }

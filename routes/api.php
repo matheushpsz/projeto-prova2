@@ -28,6 +28,7 @@ Route::controller(AutorController::class)->group(function () {
     Route::post('/autores', 'store');        // Criar
     Route::put('/autores/{id}', 'update');   // Atualizar
     Route::delete('/autores/{id}', 'delete'); // Deletar
+    Route::get('/autores/{id}/livros', 'livros'); // Listar livros de um autor
 });
 
 // Rotas agrupadas para Genero
