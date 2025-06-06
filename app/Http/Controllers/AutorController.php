@@ -60,4 +60,9 @@ class AutorController extends Controller
         }
         return response()->json($autor->livros);
     }
+
+    public function getWithLivros()
+    {
+        return response()->json($this->autorService->getAllWithLivros());
+    }
 }

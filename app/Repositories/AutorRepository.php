@@ -38,4 +38,9 @@ class AutorRepository
         }
         return $autor;
     }
+    
+    public function allWithLivros()
+    {
+        return \App\Models\Autor::with('livros')->get();
+    }
 }

@@ -29,6 +29,7 @@ Route::controller(AutorController::class)->group(function () {
     Route::put('/autores/{id}', 'update');   // Atualizar
     Route::delete('/autores/{id}', 'delete'); // Deletar
     Route::get('/autores/{id}/livros', 'livros'); // Listar livros de um autor
+    Route::get('/autores-com-livros', 'getWithLivros'); // Listar autores com seus livros
 });
 
 // Rotas agrupadas para Genero
