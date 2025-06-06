@@ -11,6 +11,11 @@ class GeneroRepository
         return Genero::all();
     }
 
+    public function allWithLivros()
+    {
+        return \App\Models\Genero::with('livros')->get();
+    }
+
     public function find($id)
     {
         return Genero::find($id);

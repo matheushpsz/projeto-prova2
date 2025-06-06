@@ -41,6 +41,7 @@ Route::controller(GeneroController::class)->group(function () {
     Route::put('/generos/{id}', 'update');   // Atualizar
     Route::delete('/generos/{id}', 'delete'); // Deletar
     Route::get('/generos/{id}/livros', 'livros'); // Listar livros de um gênero
+    Route::get('/generos-com-livros', 'getWithLivros'); // Listar gêneros com seus livros
 });
 
 // Rotas agrupadas para Livro

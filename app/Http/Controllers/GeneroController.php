@@ -19,6 +19,11 @@ class GeneroController extends Controller
         return response()->json($this->generoService->getAll());
     }
 
+    public function getWithLivros()
+    {
+        return response()->json($this->generoService->getAllWithLivros());
+    }
+
     public function details($id)
     {
         $genero = $this->generoService->getById($id);

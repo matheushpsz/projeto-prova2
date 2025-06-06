@@ -37,4 +37,9 @@ class GeneroService
     {
         return $this->generoRepository->delete($id);
     }
+
+    public function getAllWithLivros()
+    {
+        return $this->generoRepository->allWithLivros();
+    }
 }
