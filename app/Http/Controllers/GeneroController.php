@@ -51,4 +51,13 @@ class GeneroController extends Controller
         }
         return response()->json(['message' => 'Gênero deletado com sucesso']);
     }
+
+    public function livros($id)
+    {
+        $genero = $this->generoService->getById($id);
+        if (!$genero) {
+            return response()->json(['message' => 'Gênero não encontrado'], 404);
+        }
+        return response()->json($genero->livros);
+    }
 }

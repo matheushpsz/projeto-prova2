@@ -40,6 +40,7 @@ Route::controller(GeneroController::class)->group(function () {
     Route::post('/generos', 'store');        // Criar
     Route::put('/generos/{id}', 'update');   // Atualizar
     Route::delete('/generos/{id}', 'delete'); // Deletar
+    Route::get('/generos/{id}/livros', 'livros'); // Listar livros de um gênero
 });
 
 // Rotas agrupadas para Livro
