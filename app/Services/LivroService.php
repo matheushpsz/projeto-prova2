@@ -37,4 +37,9 @@ class LivroService
     {
         return $this->livroRepository->delete($id);
     }
+
+    public function getAllWithRelations()
+    {
+        return $this->livroRepository->allWithRelations();
+    }
 }

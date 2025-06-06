@@ -60,4 +60,10 @@ class LivroController extends Controller
         }
         return response()->json($livro->reviews);
     }
+
+    public function getWithRelations()
+    {
+        $livros = $this->livroService->getAllWithRelations();
+        return response()->json($livros);
+    }
 }

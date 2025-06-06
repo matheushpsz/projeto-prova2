@@ -11,6 +11,11 @@ class LivroRepository
         return Livro::all();
     }
 
+    public function allWithRelations()
+    {
+        return Livro::with(['reviews', 'autor', 'genero'])->get();
+    }
+
     public function find($id)
     {
         return Livro::find($id);

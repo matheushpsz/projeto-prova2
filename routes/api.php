@@ -47,6 +47,7 @@ Route::controller(LivroController::class)->group(function () {
     Route::put('/livros/{id}', 'update');   // Atualizar
     Route::delete('/livros/{id}', 'delete'); // Deletar
     Route::get('/livros/{id}/reviews', 'reviews'); // Listar reviews de um livro
+    Route::get('/livros-with-relations', 'getWithRelations'); // Listar livros com relações
 });
 
 // Rotas agrupadas para Review
