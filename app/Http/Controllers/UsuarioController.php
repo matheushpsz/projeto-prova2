@@ -14,12 +14,12 @@ class UsuarioController extends Controller
         $this->usuarioService = $usuarioService;
     }
 
-    public function index()
+    public function get()
     {
         return response()->json($this->usuarioService->getAll());
     }
 
-    public function show($id)
+    public function details($id)
     {
         $usuario = $this->usuarioService->getById($id);
         if (!$usuario) {
@@ -43,7 +43,7 @@ class UsuarioController extends Controller
         return response()->json($usuario);
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
         $usuario = $this->usuarioService->delete($id);
         if (!$usuario) {
