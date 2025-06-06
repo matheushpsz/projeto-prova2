@@ -51,4 +51,13 @@ class LivroController extends Controller
         }
         return response()->json(['message' => 'Livro deletado com sucesso']);
     }
+
+    public function reviews($id)
+    {
+        $livro = $this->livroService->getById($id);
+        if (!$livro) {
+            return response()->json(['message' => 'Livro não encontrado'], 404);
+        }
+        return response()->json($livro->reviews);
+    }
 }

@@ -46,6 +46,7 @@ Route::controller(LivroController::class)->group(function () {
     Route::post('/livros', 'store');        // Criar
     Route::put('/livros/{id}', 'update');   // Atualizar
     Route::delete('/livros/{id}', 'delete'); // Deletar
+    Route::get('/livros/{id}/reviews', 'reviews'); // Listar reviews de um livro
 });
 
 // Rotas agrupadas para Review
